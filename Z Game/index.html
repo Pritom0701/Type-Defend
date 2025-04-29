@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rocket Typing Defense Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="game">
+
+        <div id="word-display"></div>
+        <input type="text" id="input-field" placeholder="Type the word here...">
+        <div id="game-display">
+            <div id="rocket"><img height="85px" src="Image/rocket.png" alt=""></div>
+            <div id="city"><img height="85px" width="100%" src="Image/buildings.png" alt=""></div>
+            <div id="note">
+                <p>[ Save the city by typing the word before the rocket hits—each correct word defuses a bomb...!! ]</p>
+            </div>
+            <div id="score-board">Score: 0</div>
+        </div>
+        <div id="game-over">Game Over</div>
+        <button id="restart-btn">Restart</button>
+        <button id="start-btn">Start Game</button>
+    </div>
+
+
+    <script src="main.js"></script>
+
+
+
+
+    <!-- <script>
+        const words = ['fire', 'launch', 'space', 'orbit', 'rocket', 'planet', 'asteroid', 'comet', 'fuel', 'blast'];
+        let currentWord = '';
+        let score = 0;
+        let rocket = null;
+        let fallInterval;
+
+        const wordDisplay = document.getElementById('word-display');
+        const inputField = document.getElementById('input-field');
+        const scoreBoard = document.getElementById('score-board');
+        const gameOverText = document.getElementById('game-over');
+        const restartBtn = document.getElementById('restart-btn');
+        const startBtn = document.getElementById('start-btn');
+        const gameArea = document.getElementById('game');
+
+        function getRandomWord() {
+            return words[Math.floor(Math.random() * words.length)];
+        }
+
+        function spawnRocket() {
+            currentWord = getRandomWord();
+            wordDisplay.textContent = currentWord;
+            inputField.value = '';
+
+            rocket = document.createElement('div');
+            rocket.classList.add('rocket');
+            rocket.style.left = Math.random() * (window.innerWidth - 50) + 'px';
+            gameArea.appendChild(rocket);
+
+            let topPosition = -100;
+            fallInterval = setInterval(() => {
+                if (!rocket) return;
+                topPosition += 3;
+                rocket.style.top = topPosition + 'px';
+                if (topPosition >= window.innerHeight - 130) {
+                    clearInterval(fallInterval);
+                    endGame();
+                }
+            }, 30);
+        }
+
+        function destroyRocket() {
+            clearInterval(fallInterval);
+            if (rocket && rocket.parentNode) {
+                rocket.parentNode.removeChild(rocket);
+            }
+            rocket = null;
+        }
+
+        function endGame() {
+            destroyRocket();
+            gameOverText.style.display = 'block';
+            restartBtn.style.display = 'block';
+            inputField.disabled = true;
+        }
+
+        function restartGame() {
+            score = 0;
+            scoreBoard.textContent = 'Score: 0';
+            gameOverText.style.display = 'none';
+            restartBtn.style.display = 'none';
+            inputField.disabled = false;
+            inputField.value = '';
+            inputField.focus();
+            spawnRocket();
+        }
+
+        function startGame() {
+            startBtn.style.display = 'none';
+            score = 0;
+            scoreBoard.textContent = 'Score: 0';
+            scoreBoard.style.display = 'block';
+            inputField.style.display = 'block';
+            inputField.disabled = false;
+            inputField.value = '';
+            inputField.focus();
+            spawnRocket();
+        }
+
+        inputField.addEventListener('input', () => {
+            if (inputField.value.trim() === currentWord) {
+                destroyRocket();
+                score++;
+                scoreBoard.textContent = 'Score: ' + score;
+                spawnRocket();
+            }
+        });
+
+        restartBtn.addEventListener('click', restartGame);
+        startBtn.addEventListener('click', startGame);
+    </script> -->
+</body>
+
+</html>

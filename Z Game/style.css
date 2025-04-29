@@ -1,0 +1,234 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #0c0c2c;
+    color: white;
+    overflow: hidden;
+}
+
+#game {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+#word-display {
+    position: absolute;
+    bottom: 125px;
+    right: 55%;
+    transform: translateX(-50%);
+    font-size: 2em;
+}
+
+#input-field {
+    position: absolute;
+    bottom: 120px;
+    left: 55%;
+    transform: translateX(-50%);
+    font-size: 1.2em;
+    padding: 10px;
+    display: none;
+}
+
+#game-display {
+    position: relative;
+    width: 70%;
+    height: 65%;
+    background-color: azure;
+    margin-left: 15%;
+    margin-top: 2%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#rocket {
+    position: absolute;
+    top: -70px;
+    left: 47.5%;
+    background: url('https://i.imgur.com/XG4sn4V.png') no-repeat center;
+    background-size: contain;
+    z-index: 2;
+}
+
+#city {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 83px;
+    background-size: cover;
+    z-index: 1;
+}
+
+#note {
+    position: absolute;
+    left: 20px;
+    width: 250px;
+}
+
+#note p {
+    color: #0c0c2c;
+}
+
+#score-board {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1.5em;
+    display: none;
+    color: #0c0c2c;
+}
+
+#game-over {
+    display: none;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3em;
+    color: red;
+    text-align: center;
+}
+
+#restart-btn {
+    display: none;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    z-index: 4;
+}
+
+#start-btn {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    z-index: 3;
+}
+
+#start-btn {
+    display: block;
+    top: 50%;
+}
+
+
+
+@media (max-width: 860px) {
+    #word-display {
+        position: absolute;
+        top: 382px;
+        /* left: 20%; */
+        right: 60%;
+        font-size: 10px;
+        transform: translateX(-50%);
+        font-size: 1.6em;
+    }
+
+    #input-field {
+        position: absolute;
+        top: 375px;
+        left: 65%;
+        width: 175px;
+        height: 0px;
+        transform: translateX(-50%);
+        font-size: 1.2em;
+        padding: 20px;
+        display: none;
+    }
+
+    #game-display {
+        position: relative;
+        width: 90%;
+        height: 350px;
+        background-color: azure;
+        margin-left: 5%;
+        margin-top: 2%;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+
+    #rocket {
+        position: absolute;
+        top: -70px;
+        left: 45%;
+        background: url('https://i.imgur.com/XG4sn4V.png') no-repeat center;
+        background-size: contain;
+        z-index: 2;
+    }
+
+    #note {
+        position: absolute;
+        left: 20px;
+        width: 100px;
+    }
+
+    #note p {
+        color: #0c0c2c;
+        font-size: 11px;
+    }
+
+    #game-over {
+        display: none;
+        position: absolute;
+        top: 190px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 3em;
+        color: red;
+        text-align: center;
+    }
+
+    #restart-btn {
+        display: none;
+        position: absolute;
+        top: 250px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 10px 20px;
+        font-size: 1.2em;
+        cursor: pointer;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        z-index: 4;
+    }
+
+    #start-btn {
+        position: absolute;
+        top: 250px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 10px 20px;
+        font-size: 1.2em;
+        cursor: pointer;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        z-index: 3;
+    }
+
+    #score-board {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 1.3em;
+        display: none;
+        color: #0c0c2c;
+    }
+}
